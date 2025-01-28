@@ -6,7 +6,7 @@ function App() {
       id: 1,
       title: "Item 1",
       price: 1111,
-      date: new Date(2025, 1, 28),
+      date: new Date(2025, 0, 28),
     },
     {
       id: 2,
