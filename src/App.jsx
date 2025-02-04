@@ -12,7 +12,7 @@ function App() {
     {
       id: 2,
       title: "Item 2",
-      price: 1500,
+      price: 500,
       date: new Date(2023, 7, 18),
     },
     {
@@ -24,7 +24,7 @@ function App() {
     {
       id: 4,
       title: "Item 4",
-      price: 700,
+      price: 900,
       date: new Date(2024, 7, 12),
     },
   ];
