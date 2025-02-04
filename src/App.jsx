@@ -12,7 +12,7 @@ function App() {
     {
       id: 2,
       title: "Item 2",
-      price: 500,
+      price: 1500,
       date: new Date(2023, 7, 18),
     },
     {

@@ -1,6 +1,6 @@
 import "./ChartBar.css";
 
-const ChartBar = ({ month }) => {
+const ChartBar = ({ month, value, max }) => {
   return (
     <div className="chart-bar">
       <div className="chart-bar__inner">
