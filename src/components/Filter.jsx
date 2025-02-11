@@ -1,14 +1,22 @@
 import "./Filter.css";
 
-const Filter = () => {
+const Filter = ({ years, selectedYear, setSelectedYear }) => {
   return (
     <div className="expenses-filter">
       <label>Filter by year</label>
-      <select>
-        <option>ALL</option>
-        <option>2023</option>
-        <option>2024</option>
-        <option>2025</option>
+      <select
+        value={selectedYear}
+        onChange={(event) => {
+          setSelectedYear(event.target.value);
+        }}
+      >
+        {years.map((y) => {
+          return (
+            <option value={y} key={y}>
+              {y}
+            </option>
+          );
+        })}
       </select>
     </div>
   );
