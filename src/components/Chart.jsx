@@ -25,7 +25,12 @@ const Chart = ({ data }) => {
     <div className="chart">
       {chartData.map((element) => {
         return (
-          <ChartBar month={element.label} value={element.value} max={max} />
+          <ChartBar
+            key={element.label}
+            month={element.label}
+            value={element.value}
+            max={max}
+          />
         );
       })}
     </div>

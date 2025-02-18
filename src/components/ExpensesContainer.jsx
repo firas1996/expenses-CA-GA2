@@ -27,6 +27,7 @@ const ExpensesContainer = ({ data }) => {
       {filtredData.map((expense) => {
         return (
           <ExpenseItem
+            key={expense.id}
             title={expense.title}
             price={expense.price}
             date={expense.date}
