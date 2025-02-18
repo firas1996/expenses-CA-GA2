@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./AddExpense.css";
 
-const AddExpense = () => {
+const AddExpense = ({ getNewItem, id }) => {
   const [inputs, setInputs] = useState({
     title: "",
     price: "",
@@ -18,7 +18,12 @@ const AddExpense = () => {
   const minDate = `${today - 2}-01-01`;
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log(inputs);
+    getNewItem({
+      id: id + 1,
+      title: inputs.title,
+      price: +inputs.price,
+      date: new Date(inputs.date),
+    });
     setInputs({
       title: "",
       price: "",
