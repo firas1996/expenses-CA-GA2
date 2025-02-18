@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Fragment, useState } from "react";
 import AddExpense from "./components/AddExpense";
 import ExpenseItem from "./components/ExpenseItem";
 import ExpensesContainer from "./components/ExpensesContainer";
@@ -37,10 +37,10 @@ function App() {
   const id = Math.max(...data.map((el) => el.id));
   console.log(id);
   return (
-    <div>
+    <>
       <AddExpense getNewItem={getNewItem} id={id} />
       <ExpensesContainer data={data} />
-    </div>
+    </>
   );
 }
 
