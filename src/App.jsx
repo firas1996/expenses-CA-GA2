@@ -2,6 +2,7 @@ import { Fragment, useState } from "react";
 import AddExpense from "./components/AddExpense";
 import ExpenseItem from "./components/ExpenseItem";
 import ExpensesContainer from "./components/ExpensesContainer";
+import MyFrag from "./components/MyFrag";
 
 const oldData = [
   {
@@ -37,10 +38,10 @@ function App() {
   const id = Math.max(...data.map((el) => el.id));
   console.log(id);
   return (
-    <>
+    <MyFrag>
       <AddExpense getNewItem={getNewItem} id={id} />
       <ExpensesContainer data={data} />
-    </>
+    </MyFrag>
   );
 }
 
