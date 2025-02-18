@@ -16,22 +16,53 @@ const AddExpense = () => {
   const today = new Date(Date.now()).getFullYear();
   const maxDate = `${today + 2}-12-31`;
   const minDate = `${today - 2}-01-01`;
-  const submitHandler = () => {};
+  const submitHandler = (e) => {
+    e.preventDefault();
+    console.log(inputs);
+    setInputs({
+      title: "",
+      price: "",
+      date: "",
+    });
+  };
   return (
     <div className="new-expense">
       <form onSubmit={submitHandler}>
         <div className="new-expense__controls">
           <div className="new-expense__control">
             <label>Title</label>
-            <input placeholder="Title" />
+            <input
+              required
+              name="title"
+              onChange={handelChange}
+              value={inputs.title}
+              placeholder="Title"
+            />
           </div>
           <div className="new-expense__control">
             <label>Price</label>
-            <input placeholder="Price" type="number" min="0" step="0.01" />
+            <input
+              required
+              name="price"
+              onChange={handelChange}
+              value={inputs.price}
+              placeholder="Price"
+              type="number"
+              min="0"
+              step="0.01"
+            />
           </div>
           <div className="new-expense__control">
             <label>Date</label>
-            <input type="date" min={minDate} max={maxDate} />
+            <input
+              required
+              name="date"
+              onChange={handelChange}
+              value={inputs.date}
+              type="date"
+              min={minDate}
+              max={maxDate}
+            />
           </div>
         </div>
         <div className="new-expense__actions">
